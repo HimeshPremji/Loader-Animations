@@ -1,0 +1,60 @@
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  background: black;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    255deg,
+    rgb(146, 146, 146) 0%,
+    /* rgb(105, 102, 102) 18%, */ rgb(255, 255, 255) 100%
+  );
+  background-attachment: fixed;
+  display: grid;
+  z-index: 9999;
+  overflow: hidden;
+}
+.loader .main-text {
+  font-size: 4.4rem;
+  font-family: var(--thirdFont);
+  width: 100%;
+  font-style: italic;
+  text-align: center;
+  text-transform: none;
+  text-decoration: line-through;
+  font-weight: 100;
+  color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.clips {
+  /* background: rgb(65, 9, 9); */
+  background: rgba(255, 255, 255, 0.482);
+  background: rgba(115, 7, 7, 0.482);
+  color: black;
+  position: relative;
+  overflow: hidden;
+}
+.clips h2 {
+  font-size: 5rem;
+  font-family: var(--thirdFont);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 768px) {
+  .loader .main-text {
+    font-size: 3.2rem;
+  }
+}

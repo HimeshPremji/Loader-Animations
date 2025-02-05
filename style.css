@@ -49,6 +49,21 @@ img {
   object-fit: cover;
   position: relative;
 }
+nav {
+  margin-top: 3rem;
+  border-top: .1rem solid var(--secondary);
+  border-bottom: .1rem solid var(--secondary);
+}
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+nav ul a {
+  text-decoration: none;
+  color: var(--secondary);
+  font-size: 1.4rem;
+}
 main {
   padding: 5rem;
 }

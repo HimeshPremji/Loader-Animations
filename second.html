@@ -5,18 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Loading Animation</title>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./style2.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   </head>
   <body>
     <div class="loader">
-      <div class="clips"><h2>L</h2></div>
-      <div class="clips"><h2>O</h2></div>
-      <div class="clips"><h2>A</h2></div>
-      <div class="clips"><h2>D</h2></div>
+      <h2 class="main-text">HimeshPremji</h2>
+      <div class="clips"><h2></h2></div>
+      <div class="clips"><h2></h2></div>
+      <div class="clips"><h2></h2></div>
+      <div class="clips"><h2></h2></div>
     </div>
     <nav>
       <ul>
-        <li><a href="#">First Anim</a></li>
+        <li><a href="./index.html">First Anim</a></li>
         <li><a href="./second.html">Second Anim</a></li>
       </ul>
     </nav>
@@ -25,26 +27,34 @@
       <a href="https://github.com/HimeshPremji">Github Link</a>
     </main>
     <script>
+      const loader = document.querySelector(".loader");
       const clips = document.querySelectorAll(".clips");
       window.addEventListener("load", () => {
-        clips.style.height = "100%";
+        clips.style.height = "0%";
+        loader.style.height = "100%";
       });
-      gsap.fromTo(
+      const tl = gsap.timeline();
+      tl.fromTo(
         clips,
         {
-          height: "100%",
+          height: 0,
           delay: 0.2,
         },
         {
-          height: 0,
-          transformOrigin: "top",
+          height: "100%",
           stagger: 0.06,
           duration: 1.5,
           ease: "power4.inOut",
-          onComplete: () => {
-            gsap.to(".loader", { autoAlpha: 0 });
-          },
         }
+      ).to(
+        loader,
+        {
+          height: "0%",
+          transformOrigin: "top",
+          duration: 0.64,
+          ease: "power2.inOut",
+        },
+        "-=0.8"
       );
     </script>
   </body>
