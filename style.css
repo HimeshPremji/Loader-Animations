@@ -17,14 +17,32 @@
 }
 html,
 body {
-  background-color: var(--primary);
   color: var(--secondary);
   font-family: var(--thirdFont);
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: transparent;
+}
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+}
+main {
+  /* position: relative; */
+  height: 100vh;
+  width: 100%;
+  padding: 4rem;
 }
 h1 {
   font-size: 6rem;
   text-transform: uppercase;
   font-family: var(--thirdFont);
+  color: var(--primary);
 }
 h2 {
   font-size: 3.2rem;
@@ -50,9 +68,8 @@ img {
   position: relative;
 }
 nav {
-  margin-top: 3rem;
-  border-top: .1rem solid var(--secondary);
-  border-bottom: .1rem solid var(--secondary);
+  border-top: 0.1rem solid #111111;
+  border-bottom: 0.1rem solid #111111;
 }
 nav ul {
   display: flex;
@@ -60,12 +77,7 @@ nav ul {
   align-items: center;
 }
 nav ul a {
-  text-decoration: none;
-  color: var(--secondary);
   font-size: 1.4rem;
-}
-main {
-  padding: 5rem;
 }
 .loader {
   position: fixed;
@@ -79,11 +91,23 @@ main {
   overflow: hidden;
 }
 .clips {
-  /* background: rgb(65, 9, 9); */
-  background: white;
+  background: rgb(65, 9, 9);
   color: black;
   position: relative;
   overflow: hidden;
+  /* opacity: 0.4; */
+}
+.clips:nth-child(2) {
+  background: #181c14;
+}
+.clips:nth-child(3) {
+  background: #4d4d4d;
+}
+.clips:nth-child(4) {
+  background: #3c3c3c;
+}
+.clips:nth-child(5) {
+  background: #ecdfcc;
 }
 .clips h2 {
   font-size: 5rem;

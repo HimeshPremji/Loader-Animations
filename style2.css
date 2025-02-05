@@ -36,23 +36,6 @@
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
 }
-.clips {
-  /* background: rgb(65, 9, 9); */
-  background: rgba(255, 255, 255, 0.482);
-  background: rgba(115, 7, 7, 0.482);
-  color: black;
-  position: relative;
-  overflow: hidden;
-}
-.clips h2 {
-  font-size: 5rem;
-  font-family: var(--thirdFont);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: 0;
-  padding: 0;
-}
 @media (max-width: 768px) {
   .loader .main-text {
     font-size: 3.2rem;
